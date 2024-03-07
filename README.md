@@ -18,3 +18,22 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 - **TarjetaDeCredito**: Representa una tarjeta de crédito y se encarga de almacenar la información relacionada con ella. Cumple con el SRP al manejar únicamente la información y las acciones relacionadas con la tarjeta de crédito.
 - **Cliente**: Parece representar un cliente en el sistema y contiene información sobre él. Podría estar relacionado con la gestión de usuarios y la información del cliente. Si esto es así, cumple con el SRP.
 - **RegistroDeActividad**: No está claro qué responsabilidad tiene esta clase basándose en el nombre y la descripción proporcionados. Podría necesitar una reestructuración para cumplir mejor con el SRP.
+
+- ¡Por supuesto!
+
+## Open/Closed Principle (OCP - Principio de Abierto/Cerrado):
+
+- **InterfazUsuario**: Si separamos esta interfaz en interfaces más específicas, estaríamos cumpliendo mejor con el OCP al permitir que estas interfaces sean extendidas sin modificar el código existente.
+- **Beneficios**: Esta clase abstracta parece ser un buen ejemplo de cómo aplicar el OCP. Puede ser extendida para proporcionar diferentes tipos de beneficios sin necesidad de modificar el código existente.
+
+## Liskov Substitution Principle (LSP - Principio de Sustitución de Liskov):
+
+- No está claro cómo se aplicaría este principio en las clases proporcionadas. Podría requerir más detalles sobre la relación entre las clases y cómo se utilizan en el sistema.
+
+## Interface Segregation Principle (ISP - Principio de Segregación de Interfaces):
+
+- La división de la interfaz de usuario en interfaces más específicas puede ayudar a cumplir con el ISP, asegurando que los clientes solo dependan de las interfaces que necesitan.
+
+## Dependency Inversion Principle (DIP - Principio de Inversión de Dependencias):
+
+- No se observa una clara inversión de dependencias en las clases proporcionadas. Sin embargo, el diseño general del sistema podría seguir este principio al depender de abstracciones en lugar de implementaciones concretas, especialmente en la arquitectura de microservicios mencionada en el enunciado.
