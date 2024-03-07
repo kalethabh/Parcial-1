@@ -15,14 +15,14 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 ## Single Responsibility Principle (SRP - Principio de Responsabilidad Única):
 
 - **User**: Esta clase parece estar relacionada con la gestión de usuarios y la información personal. Se encarga de la autenticación de usuarios y el manejo de su información personal. Cumple con el principio de responsabilidad única al manejar las responsabilidades relacionadas con la gestión del usuario.
-- **InterfazUsuario**: Esta clase parece ser una interfaz genérica para la interacción con el usuario. Puede haber una oportunidad para dividir esta interfaz en interfaces más específicas, cada una responsable de una funcionalidad única para cumplir mejor con el SRP.
-- **TarjetaDeCredito**: Representa una tarjeta de crédito y está asociada con `Cliente` mediante una relación de agregación, lo que indica que una tarjeta de crédito es parte de un cliente, pero también puede existir de forma independiente.
-- **Cliente**: Esta clase se asocia con `InfoUsuario` mediante una relación simple, lo que sugiere que un cliente tiene una instancia de `InfoUsuario`. Además, se menciona que `Cliente` tiene una relación de agregación con `TarjetaDeCredito`, lo que implica que un cliente puede tener una o más tarjetas de crédito asociadas.
+- **PersonalInformation**: Esta clase parece ser una interfaz genérica para la interacción con el usuario. Puede haber una oportunidad para dividir esta interfaz en interfaces más específicas, cada una responsable de una funcionalidad única para cumplir mejor con el SRP.
+- **CreditCard**: Representa una tarjeta de crédito y está asociada con `Client` mediante una relación de agregación, lo que indica que una tarjeta de crédito es parte de un cliente, pero también puede existir de forma independiente.
+- **Client**: Esta clase se asocia con `PersonalInformation` mediante una relación simple, lo que sugiere que un cliente tiene una instancia de `PersonalInformation`. Además, se menciona que `Client` tiene una relación de agregación con `CreditCard`, lo que implica que un cliente puede tener una o más tarjetas de crédito asociadas.
 
 ## Open/Closed Principle (OCP - Principio de Abierto/Cerrado):
 
-- **InterfazUsuario**: Si separamos esta interfaz en interfaces más específicas, estaríamos cumpliendo mejor con el OCP al permitir que estas interfaces sean extendidas sin modificar el código existente.
-- **Beneficios**: Esta clase abstracta parece ser un buen ejemplo de cómo aplicar el OCP. Puede ser extendida para proporcionar diferentes tipos de beneficios sin necesidad de modificar el código existente.
+- **InterfaceUser**: Si separamos esta interfaz en interfaces más específicas, estaríamos cumpliendo mejor con el OCP al permitir que estas interfaces sean extendidas sin modificar el código existente.
+- **Benefits**: Esta clase abstracta parece ser un buen ejemplo de cómo aplicar el OCP. Puede ser extendida para proporcionar diferentes tipos de beneficios sin necesidad de modificar el código existente.
 
 ## Liskov Substitution Principle (LSP - Principio de Sustitución de Liskov):
 
