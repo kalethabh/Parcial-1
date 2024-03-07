@@ -9,4 +9,12 @@ Por otra parte, la identificación de los requerimientos críticos, equilibrando
 La presentación clara de los beneficios disponibles, junto con una retroalimentación inmediata y relevante sobre las recomendaciones de beneficios, se convirtió en una prioridad para asegurar que los usuarios pudieran tomar decisiones informadas con facilidad. Así mismo, con los cimientos tecnológicos en su lugar, la experiencia del usuario debe ser visualmente atractiva y accesible en una variedad de dispositivos, si no que también proporcionara una interacción intuitiva con el sistema.
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
-![img](https://github.com/kalethabh/Parcial-1/assets/113316840/01a371bd-bd9b-49fa-b8d4-1c661b36cec9)
+
+## Single Responsibility Principle (SRP - Principio de Responsabilidad Única):
+
+- **User**: Esta clase parece estar relacionada con la gestión de usuarios y la información personal. Se encarga de la autenticación de usuarios y el manejo de su información personal. Cumple con el principio de responsabilidad única al manejar las responsabilidades relacionadas con la gestión del usuario.
+- **InterfazUsuario**: Esta clase parece ser una interfaz genérica para la interacción con el usuario. Puede haber una oportunidad para dividir esta interfaz en interfaces más específicas, cada una responsable de una funcionalidad única para cumplir mejor con el SRP.
+- **InformacionPersonal**: Esta clase maneja la información personal de un usuario y se encarga de agregar y actualizar esta información. Cumple con el SRP al ser responsable únicamente de la gestión de la información personal del usuario.
+- **TarjetaDeCredito**: Representa una tarjeta de crédito y se encarga de almacenar la información relacionada con ella. Cumple con el SRP al manejar únicamente la información y las acciones relacionadas con la tarjeta de crédito.
+- **Cliente**: Parece representar un cliente en el sistema y contiene información sobre él. Podría estar relacionado con la gestión de usuarios y la información del cliente. Si esto es así, cumple con el SRP.
+- **RegistroDeActividad**: No está claro qué responsabilidad tiene esta clase basándose en el nombre y la descripción proporcionados. Podría necesitar una reestructuración para cumplir mejor con el SRP.
