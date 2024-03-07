@@ -9,6 +9,7 @@ Por otra parte, la identificación de los requerimientos críticos, equilibrando
 La presentación clara de los beneficios disponibles, junto con una retroalimentación inmediata y relevante sobre las recomendaciones de beneficios, se convirtió en una prioridad para asegurar que los usuarios pudieran tomar decisiones informadas con facilidad. Así mismo, con los cimientos tecnológicos en su lugar, la experiencia del usuario debe ser visualmente atractiva y accesible en una variedad de dispositivos, si no que también proporcionara una interacción intuitiva con el sistema.
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
+![img](https://github.com/kalethabh/Parcial-1/assets/113316840/8af14adb-b7f0-4c41-8c5e-a5ab67e3377f)
 
 ## Single Responsibility Principle (SRP - Principio de Responsabilidad Única):
 
