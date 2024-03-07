@@ -9,18 +9,17 @@ Por otra parte, la identificación de los requerimientos críticos, equilibrando
 La presentación clara de los beneficios disponibles, junto con una retroalimentación inmediata y relevante sobre las recomendaciones de beneficios, se convirtió en una prioridad para asegurar que los usuarios pudieran tomar decisiones informadas con facilidad. Así mismo, con los cimientos tecnológicos en su lugar, la experiencia del usuario debe ser visualmente atractiva y accesible en una variedad de dispositivos, si no que también proporcionara una interacción intuitiva con el sistema.
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
-![img](https://github.com/kalethabh/Parcial-1/assets/113316840/8af14adb-b7f0-4c41-8c5e-a5ab67e3377f)
+![img](https://github.com/kalethabh/Parcial-1/assets/113316840/ba8027f1-7b37-4521-97dd-d5d12534718b)
 
 ## Single Responsibility Principle (SRP - Principio de Responsabilidad Única):
 
 - **User**: Esta clase parece estar relacionada con la gestión de usuarios y la información personal. Se encarga de la autenticación de usuarios y el manejo de su información personal. Cumple con el principio de responsabilidad única al manejar las responsabilidades relacionadas con la gestión del usuario.
 - **InterfazUsuario**: Esta clase parece ser una interfaz genérica para la interacción con el usuario. Puede haber una oportunidad para dividir esta interfaz en interfaces más específicas, cada una responsable de una funcionalidad única para cumplir mejor con el SRP.
-- **InformacionPersonal**: Esta clase maneja la información personal de un usuario y se encarga de agregar y actualizar esta información. Cumple con el SRP al ser responsable únicamente de la gestión de la información personal del usuario.
-- **TarjetaDeCredito**: Representa una tarjeta de crédito y se encarga de almacenar la información relacionada con ella. Cumple con el SRP al manejar únicamente la información y las acciones relacionadas con la tarjeta de crédito.
-- **Cliente**: Parece representar un cliente en el sistema y contiene información sobre él. Podría estar relacionado con la gestión de usuarios y la información del cliente. Si esto es así, cumple con el SRP.
+- **InfoUsuario**: Esta clase maneja la información general del usuario y se asocia con `InfoAccesoPersonal` a través de una relación compuesta, lo que implica que `InfoAccesoPersonal` es parte de `InfoUsuario`.
+- **InfoAccesoPersonal**: Esta clase maneja la información de acceso personal del usuario, como nombre de usuario y contraseña. Forma parte de la clase `InfoUsuario`, lo que indica una relación de composición.
+- **TarjetaDeCredito**: Representa una tarjeta de crédito y está asociada con `Cliente` mediante una relación de agregación, lo que indica que una tarjeta de crédito es parte de un cliente, pero también puede existir de forma independiente.
+- **Cliente**: Esta clase se asocia con `InfoUsuario` mediante una relación simple, lo que sugiere que un cliente tiene una instancia de `InfoUsuario`. Además, se menciona que `Cliente` tiene una relación de agregación con `TarjetaDeCredito`, lo que implica que un cliente puede tener una o más tarjetas de crédito asociadas.
 - **RegistroDeActividad**: No está claro qué responsabilidad tiene esta clase basándose en el nombre y la descripción proporcionados. Podría necesitar una reestructuración para cumplir mejor con el SRP.
-
-- ¡Por supuesto!
 
 ## Open/Closed Principle (OCP - Principio de Abierto/Cerrado):
 
@@ -38,3 +37,5 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 ## Dependency Inversion Principle (DIP - Principio de Inversión de Dependencias):
 
 - No se observa una clara inversión de dependencias en las clases proporcionadas. Sin embargo, el diseño general del sistema podría seguir este principio al depender de abstracciones en lugar de implementaciones concretas, especialmente en la arquitectura de microservicios mencionada en el enunciado.
+
+En resumen, las clases proporcionadas pueden cumplir con los principios SOLID con algunas mejoras y ajustes, como dividir la interfaz de usuario en interfaces más específicas y asegurar una adecuada inversión de dependencias en el diseño general del sistema.
