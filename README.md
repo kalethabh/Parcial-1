@@ -19,7 +19,6 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 - **InfoAccesoPersonal**: Esta clase maneja la información de acceso personal del usuario, como nombre de usuario y contraseña. Forma parte de la clase `InfoUsuario`, lo que indica una relación de composición.
 - **TarjetaDeCredito**: Representa una tarjeta de crédito y está asociada con `Cliente` mediante una relación de agregación, lo que indica que una tarjeta de crédito es parte de un cliente, pero también puede existir de forma independiente.
 - **Cliente**: Esta clase se asocia con `InfoUsuario` mediante una relación simple, lo que sugiere que un cliente tiene una instancia de `InfoUsuario`. Además, se menciona que `Cliente` tiene una relación de agregación con `TarjetaDeCredito`, lo que implica que un cliente puede tener una o más tarjetas de crédito asociadas.
-- **RegistroDeActividad**: No está claro qué responsabilidad tiene esta clase basándose en el nombre y la descripción proporcionados. Podría necesitar una reestructuración para cumplir mejor con el SRP.
 
 ## Open/Closed Principle (OCP - Principio de Abierto/Cerrado):
 
