@@ -37,6 +37,5 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 
 ## Dependency Inversion Principle (DIP - Principio de Inversión de Dependencias):
 
-- No se observa una clara inversión de dependencias en las clases proporcionadas. Sin embargo, el diseño general del sistema podría seguir este principio al depender de abstracciones en lugar de implementaciones concretas, especialmente en la arquitectura de microservicios mencionada en el enunciado.
-
-En resumen, las clases proporcionadas pueden cumplir con los principios SOLID con algunas mejoras y ajustes, como dividir la interfaz de usuario en interfaces más específicas y asegurar una adecuada inversión de dependencias en el diseño general del sistema.
+-Definir interfaces o abstracciones: En lugar de depender de implementaciones concretas, debemos crear interfaces o abstracciones que representen las funcionalidades requeridas por los módulos de alto nivel. Estas interfaces actúan como contratos que especifican los métodos y propiedades necesarios.
+-Implementar los módulos de nivel inferior: Los módulos de nivel inferior, que contienen la implementación concreta de las funcionalidades, deben implementar las interfaces definidas. Por ejemplo, en el diagrama, la clase 'TarjetaDeCredito' implementa la interfaz 'IInterfazTarjeta' en lugar de ser directamente referenciada por la clase 'Cliente'.
