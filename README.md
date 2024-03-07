@@ -10,8 +10,7 @@ La presentación clara de los beneficios disponibles, junto con una retroaliment
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
 ![img](https://github.com/kalethabh/Parcial-1/assets/113316840/ba8027f1-7b37-4521-97dd-d5d12534718b)
-![Diagrama arquitectura (3)](https://github.com/kalethabh/Parcial-1/assets/113316840/a7da6bd2-8508-4d89-86a9-42ef42e7d3bb)
-
+![Diagrama oo](https://github.com/kalethabh/Parcial-1/assets/113316840/97e2e01a-9198-4596-94fb-7dc1366c45f5)
 ## Single Responsibility Principle (SRP - Principio de Responsabilidad Única):
 
 - **User**: Esta clase parece estar relacionada con la gestión de usuarios y la información personal. Se encarga de la autenticación de usuarios y el manejo de su información personal. Cumple con el principio de responsabilidad única al manejar las responsabilidades relacionadas con la gestión del usuario.
