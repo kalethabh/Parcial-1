@@ -16,8 +16,6 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 
 - **User**: Esta clase parece estar relacionada con la gestión de usuarios y la información personal. Se encarga de la autenticación de usuarios y el manejo de su información personal. Cumple con el principio de responsabilidad única al manejar las responsabilidades relacionadas con la gestión del usuario.
 - **InterfazUsuario**: Esta clase parece ser una interfaz genérica para la interacción con el usuario. Puede haber una oportunidad para dividir esta interfaz en interfaces más específicas, cada una responsable de una funcionalidad única para cumplir mejor con el SRP.
-- **InfoUsuario**: Esta clase maneja la información general del usuario y se asocia con `InfoAccesoPersonal` a través de una relación compuesta, lo que implica que `InfoAccesoPersonal` es parte de `InfoUsuario`.
-- **InfoAccesoPersonal**: Esta clase maneja la información de acceso personal del usuario, como nombre de usuario y contraseña. Forma parte de la clase `InfoUsuario`, lo que indica una relación de composición.
 - **TarjetaDeCredito**: Representa una tarjeta de crédito y está asociada con `Cliente` mediante una relación de agregación, lo que indica que una tarjeta de crédito es parte de un cliente, pero también puede existir de forma independiente.
 - **Cliente**: Esta clase se asocia con `InfoUsuario` mediante una relación simple, lo que sugiere que un cliente tiene una instancia de `InfoUsuario`. Además, se menciona que `Cliente` tiene una relación de agregación con `TarjetaDeCredito`, lo que implica que un cliente puede tener una o más tarjetas de crédito asociadas.
 
