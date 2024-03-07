@@ -27,7 +27,7 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 
 ## Liskov Substitution Principle (LSP - Principio de Sustitución de Liskov):
 
-- No está claro cómo se aplicaría este principio en las clases proporcionadas. Podría requerir más detalles sobre la relación entre las clases y cómo se utilizan en el sistema.
+- se cumple en este diagrama de clases, ya que no hay evidencia de que las subclases alteren el comportamiento esperado de la superclase. Cada clase y subclase están definidas con atributos y métodos específicos, sin sobrescribir o cambiar la funcionalidad existente de manera que viole el LSP.
 
 ## Interface Segregation Principle (ISP - Principio de Segregación de Interfaces):
 
