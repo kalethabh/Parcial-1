@@ -10,35 +10,26 @@ La presentación clara de los beneficios disponibles, junto con una retroaliment
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
 ![img](https://github.com/kalethabh/Parcial-1/assets/113316840/ba8027f1-7b37-4521-97dd-d5d12534718b)
-##Single Responsibility Principle (Principio de Responsabilidad Única)
-
+ingle Responsibility Principle (Principio de Responsabilidad Única)
 En nuestro diagrama de clases, cada clase cumple con el principio de responsabilidad única al tener una sola razón para cambiar. Por ejemplo:
 
-- La clase `UserManagement` se encarga exclusivamente de la gestión de usuarios.
-- La clase `CreditCardManagement` se ocupa únicamente de la gestión de tarjetas de crédito.
-- La clase `CustomerManagement` tiene la responsabilidad exclusiva de representar a un cliente en el sistema.
-
-##Open/Closed Principle (Principio de Abierto/Cerrado)
-
+La clase UserManagement se encarga exclusivamente de la gestión de usuarios.
+La clase CreditCardManagement se ocupa únicamente de la gestión de tarjetas de crédito.
+La clase CustomerManagement tiene la responsabilidad exclusiva de representar a un cliente en el sistema.
+Open/Closed Principle (Principio de Abierto/Cerrado)
 Este principio se cumple en nuestro diseño al utilizar interfaces o clases abstractas para permitir la extensión sin necesidad de modificar el código existente. Por ejemplo:
 
-- Podemos añadir nuevos métodos de autenticación implementando la interfaz `AuthenticationManager` sin necesidad de modificar el código existente en otras clases.
-- Podemos añadir nuevos tipos de beneficios financieros implementando la interfaz `FinancialBenefitsManagement` sin modificar las clases existentes.
-
-##**Substitution Principle (Principio de Sustitución de Liskov)**
-
+Podemos añadir nuevos métodos de autenticación implementando la interfaz AuthenticationManager sin necesidad de modificar el código existente en otras clases.
+Podemos añadir nuevos tipos de beneficios financieros implementando la interfaz FinancialBenefitsManagement sin modificar las clases existentes.
+Substitution Principle (Principio de Sustitución de Liskov)
 Este principio se cumple en nuestro diseño al garantizar que las subclases puedan ser utilizadas a través de referencias a la clase base sin alterar el comportamiento esperado. Por ejemplo:
 
-- Las subclases de `UserManagement`, como `CustomerManagement`, pueden ser utilizadas en lugar de la clase base `UserManagement` sin cambiar el comportamiento esperado en otras partes del sistema.
-
-##**Interface Segregation Principle (Principio de Segregación de Interfaces)**
-
+Las subclases de UserManagement, como CustomerManagement, pueden ser utilizadas en lugar de la clase base UserManagement sin cambiar el comportamiento esperado en otras partes del sistema.
+Interface Segregation Principle (Principio de Segregación de Interfaces)
 Este principio se cumple en nuestro diseño al separar las interfaces grandes en interfaces más específicas y pequeñas para evitar que los clientes dependan de interfaces que no usan. Por ejemplo:
 
-- Tenemos interfaces separadas para la gestión de usuarios, gestión de tarjetas de crédito, gestión de beneficios, etc., lo que permite a los clientes interactuar con las interfaces relevantes para sus necesidades sin depender de funcionalidades innecesarias.
-
-##**Dependency Inversion Principle (Principio de Inversión de Dependencias)**
-
+Tenemos interfaces separadas para la gestión de usuarios, gestión de tarjetas de crédito, gestión de beneficios, etc., lo que permite a los clientes interactuar con las interfaces relevantes para sus necesidades sin depender de funcionalidades innecesarias.
+Dependency Inversion Principle (Principio de Inversión de Dependencias)
 Este principio se cumple en nuestro diseño al asegurarnos de que los módulos de alto nivel no dependan directamente de los módulos de bajo nivel, y que ambos dependan de abstracciones. Por ejemplo:
 
-- La lógica de alto nivel, como la gestión de usuarios, depende de interfaces como `UserManagement` en lugar de depender directamente de las implementaciones concretas de las clases.
+La lógica de alto nivel, como la gestión de usuarios, depende de interfaces como UserManagement en lugar de depender directamente de las implementaciones concretas de las clases.
