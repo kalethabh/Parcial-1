@@ -14,22 +14,22 @@ La implementación del sistema debe seguir los principios SOLID para asegurar un
 
 En nuestro diagrama de clases, cada clase cumple con el principio de responsabilidad única al tener una sola razón para cambiar. Por ejemplo:
 
-- La clase `UserManagement` se encarga exclusivamente de la gestión de usuarios.
-- La clase `CreditCardManagement` se ocupa únicamente de la gestión de tarjetas de crédito.
-- La clase `CustomerManagement` tiene la responsabilidad exclusiva de representar a un cliente en el sistema.
+- La clase `User` se encarga exclusivamente de la gestión de usuarios.
+- La clase `CreditCard` se ocupa únicamente de la gestión de tarjetas de crédito.
+- La clase `Customer` tiene la responsabilidad exclusiva de representar a un cliente en el sistema.
 
 ### Open/Closed Principle (Principio de Abierto/Cerrado)
 
 Este principio se cumple en nuestro diseño al utilizar interfaces o clases abstractas para permitir la extensión sin necesidad de modificar el código existente. Por ejemplo:
 
-- Podemos añadir nuevos métodos de autenticación implementando la interfaz `AuthenticationManager` sin necesidad de modificar el código existente en otras clases.
-- Podemos añadir nuevos tipos de beneficios financieros implementando la interfaz `FinancialBenefitsManagement` sin modificar las clases existentes.
+- Podemos añadir nuevos métodos de autenticación implementando la interfaz `Authenticator` sin necesidad de modificar el código existente en otras clases.
+- Podemos añadir nuevos tipos de beneficios financieros implementando la interfaz `FinancialBenefits` sin modificar las clases existentes.
 
 ### Substitution Principle (Principio de Sustitución de Liskov)
 
 Este principio se cumple en nuestro diseño al garantizar que las subclases puedan ser utilizadas a través de referencias a la clase base sin alterar el comportamiento esperado. Por ejemplo:
 
-- Las subclases de `UserManagement`, como `CustomerManagement`, pueden ser utilizadas en lugar de la clase base `UserManagement` sin cambiar el comportamiento esperado en otras partes del sistema.
+- Las subclases de `User`, como `Customer`, pueden ser utilizadas en lugar de la clase base `User` sin cambiar el comportamiento esperado en otras partes del sistema.
 
 ### Interface Segregation Principle (Principio de Segregación de Interfaces)
 
@@ -41,6 +41,6 @@ Este principio se cumple en nuestro diseño al separar las interfaces grandes en
 
 Este principio se cumple en nuestro diseño al asegurarnos de que los módulos de alto nivel no dependan directamente de los módulos de bajo nivel, y que ambos dependan de abstracciones. Por ejemplo:
 
-- La lógica de alto nivel, como la gestión de usuarios, depende de interfaces como `UserManagement` en lugar de depender directamente de las implementaciones concretas de las clases.
+- La lógica de alto nivel, como la gestión de usuarios, depende de interfaces como `User` en lugar de depender directamente de las implementaciones concretas de las clases.
 
 ---
