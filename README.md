@@ -10,28 +10,35 @@ La presentación clara de los beneficios disponibles, junto con una retroaliment
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
 ![img](https://github.com/kalethabh/Parcial-1/assets/113316840/ba8027f1-7b37-4521-97dd-d5d12534718b)
-## Single Responsibility Principle (SRP - Principio de Responsabilidad Única):
+**Single Responsibility Principle (Principio de Responsabilidad Única)**
 
-- **User**: Esta clase parece estar relacionada con la gestión de usuarios y la información personal. Se encarga de la autenticación de usuarios y el manejo de su información personal. Cumple con el principio de responsabilidad única al manejar las responsabilidades relacionadas con la gestión del usuario.
-- **PersonalInformation**: Esta clase parece ser una interfaz genérica para la interacción con el usuario. Puede haber una oportunidad para dividir esta interfaz en interfaces más específicas, cada una responsable de una funcionalidad única para cumplir mejor con el SRP.
-- **CreditCard**: Representa una tarjeta de crédito y está asociada con `Client` mediante una relación de agregación, lo que indica que una tarjeta de crédito es parte de un cliente, pero también puede existir de forma independiente.
-- **Client**: Esta clase se asocia con `PersonalInformation` mediante una relación simple, lo que sugiere que un cliente tiene una instancia de `PersonalInformation`. Además, se menciona que `Client` tiene una relación de agregación con `CreditCard`, lo que implica que un cliente puede tener una o más tarjetas de crédito asociadas.
+En nuestro diagrama de clases, cada clase cumple con el principio de responsabilidad única al tener una sola razón para cambiar. Por ejemplo:
 
-## Open/Closed Principle (OCP - Principio de Abierto/Cerrado):
+- La clase `UserManagement` se encarga exclusivamente de la gestión de usuarios.
+- La clase `CreditCardManagement` se ocupa únicamente de la gestión de tarjetas de crédito.
+- La clase `CustomerManagement` tiene la responsabilidad exclusiva de representar a un cliente en el sistema.
 
-- **InterfaceUser**: Si separamos esta interfaz en interfaces más específicas, estaríamos cumpliendo mejor con el OCP al permitir que estas interfaces sean extendidas sin modificar el código existente.
-- **Benefits**: Esta clase abstracta parece ser un buen ejemplo de cómo aplicar el OCP. Puede ser extendida para proporcionar diferentes tipos de beneficios sin necesidad de modificar el código existente.
+**Open/Closed Principle (Principio de Abierto/Cerrado)**
 
-## Liskov Substitution Principle (LSP - Principio de Sustitución de Liskov):
+Este principio se cumple en nuestro diseño al utilizar interfaces o clases abstractas para permitir la extensión sin necesidad de modificar el código existente. Por ejemplo:
 
-- se cumple en este diagrama de clases, ya que no hay evidencia de que las subclases alteren el comportamiento esperado de la superclase. Cada clase y subclase están definidas con atributos y métodos específicos, sin sobrescribir o cambiar la funcionalidad existente de manera que viole el LSP.
+- Podemos añadir nuevos métodos de autenticación implementando la interfaz `AuthenticationManager` sin necesidad de modificar el código existente en otras clases.
+- Podemos añadir nuevos tipos de beneficios financieros implementando la interfaz `FinancialBenefitsManagement` sin modificar las clases existentes.
 
-## Interface Segregation Principle (ISP - Principio de Segregación de Interfaces):
+**Substitution Principle (Principio de Sustitución de Liskov)**
 
-- La división de la interfaz de usuario en interfaces más específicas puede ayudar a cumplir con el ISP, asegurando que los clientes solo dependan de las interfaces que necesitan.
+Este principio se cumple en nuestro diseño al garantizar que las subclases puedan ser utilizadas a través de referencias a la clase base sin alterar el comportamiento esperado. Por ejemplo:
 
-## Dependency Inversion Principle (DIP - Principio de Inversión de Dependencias):
+- Las subclases de `UserManagement`, como `CustomerManagement`, pueden ser utilizadas en lugar de la clase base `UserManagement` sin cambiar el comportamiento esperado en otras partes del sistema.
 
-- **Definir interfaces o abstracciones**: En lugar de depender de implementaciones concretas, se debe crear interfaces o abstracciones que representen las funcionalidades requeridas por los módulos de alto nivel. Estas interfaces actúan como contratos que especifican los métodos y propiedades necesarios.
+**Interface Segregation Principle (Principio de Segregación de Interfaces)**
 
-- **Implementar los módulos de nivel inferior**: Los módulos de nivel inferior, que contienen la implementación concreta de las funcionalidades, deben implementar las interfaces definidas. Por ejemplo, la clase `CreditCard` implementa la interfaz 'IInterfazTarjeta' en lugar de ser directamente referenciada por la clase `Client`.
+Este principio se cumple en nuestro diseño al separar las interfaces grandes en interfaces más específicas y pequeñas para evitar que los clientes dependan de interfaces que no usan. Por ejemplo:
+
+- Tenemos interfaces separadas para la gestión de usuarios, gestión de tarjetas de crédito, gestión de beneficios, etc., lo que permite a los clientes interactuar con las interfaces relevantes para sus necesidades sin depender de funcionalidades innecesarias.
+
+**Dependency Inversion Principle (Principio de Inversión de Dependencias)**
+
+Este principio se cumple en nuestro diseño al asegurarnos de que los módulos de alto nivel no dependan directamente de los módulos de bajo nivel, y que ambos dependan de abstracciones. Por ejemplo:
+
+- La lógica de alto nivel, como la gestión de usuarios, depende de interfaces como `UserManagement` en lugar de depender directamente de las implementaciones concretas de las clases.
