@@ -18,7 +18,7 @@ En nuestro diagrama de clases, cada clase cumple con el principio de responsabil
 - La clase `CreditCardManagement` se ocupa únicamente de la gestión de tarjetas de crédito.
 - La clase `CustomerManagement` tiene la responsabilidad exclusiva de representar a un cliente en el sistema.
 
-#**Open/Closed Principle (Principio de Abierto/Cerrado)**
+#**Open/Closed Principle (Principio de Abierto/Cerrado)**#
 
 Este principio se cumple en nuestro diseño al utilizar interfaces o clases abstractas para permitir la extensión sin necesidad de modificar el código existente. Por ejemplo:
 
