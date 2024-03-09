@@ -44,3 +44,5 @@ Este principio se cumple en nuestro diseño al asegurarnos de que los módulos d
 - La lógica de alto nivel, como la gestión de usuarios, depende de interfaces como `User` en lugar de depender directamente de las implementaciones concretas de las clases.
 
 ---
+![Diagrama oo (2)](https://github.com/kalethabh/Parcial-1/assets/113316840/8afc2ab9-ccb8-4470-8ecf-f82648777692)
+
