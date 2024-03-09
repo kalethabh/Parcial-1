@@ -10,6 +10,7 @@ La presentación clara de los beneficios disponibles, junto con una retroaliment
 
 La implementación del sistema debe seguir los principios SOLID para asegurar un código mantenible y extensible. Cada microservicio debe ser construido con un propósito específico, desde gestionar la autenticación de usuarios hasta procesar complejas recomendaciones de beneficios. La seguridad fue debe estar en cada etapa empleando las mejores prácticas para proteger la información personal y financiera de los usuarios.
 ![img](https://github.com/kalethabh/Parcial-1/assets/113316840/ba8027f1-7b37-4521-97dd-d5d12534718b)
+---
 ### Single Responsibility Principle (Principio de Responsabilidad Única)
 
 En nuestro diagrama de clases, cada clase cumple con el principio de responsabilidad única al tener una sola razón para cambiar. Por ejemplo:
